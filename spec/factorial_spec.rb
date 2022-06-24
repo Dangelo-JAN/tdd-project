@@ -24,8 +24,8 @@ describe 'Solver tests drivers' do
       expect(solver.factorial(1)).to eq(1)
     end
 
-    it 'returns 1 for negative numbers' do
-      expect(solver.factorial(-1)).to eq(1)
+    it 'should have raised an error for negative numbers' do
+      expect { solver.factorial(-1) }.to raise_error('Negative numbers not allowed')
     end
 
     it 'returns nil for non-numbers' do

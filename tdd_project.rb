@@ -1,9 +1,10 @@
 class Solver
-  def factorial(num)
-    return nil unless num.is_a? Integer
-    return 1 if num <= 0
+  def factorial(number)
+    return nil unless number.is_a? Integer
+    return 1 if number.zero? || number == 1
+    return raise 'Negative numbers not allowed' if number.negative?
 
-    num * factorial(num - 1)
+    number * factorial(number - 1)
   end
 
   def fizzbuzz(num)
